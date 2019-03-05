@@ -1,0 +1,9 @@
+﻿<template id="menu-template">
+    <div class="menu">
+        <div class="menu__toplevel-item" v-for="item in topLevelItems" :class="{active: item.isActive}">
+            <div class="menu__label" v-if="item.link.length === 0">{{ item.text }}</div>
+            <a class="menu__label" :href="item.link" v-if="item.link.length > 0">{{ item.text }}</a>
+            <smashing-submenu v-if="item.subItems.length > 0" :items="item.subItems"></smashing-submenu>
+        </div>
+    </div>
+</template>
