@@ -140,6 +140,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Content.cs" />
+    <Compile Include="Models\HtmlData.cs" />
+    <Compile Include="Models\SmashingModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +163,7 @@
     <Content Include="css\main.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="parameters.xml" />
     <Content Include="scripts\app\app.js" />
     <Content Include="scripts\app\components\button.js" />
     <Content Include="scripts\app\components\footer.js" />
@@ -173,16 +177,16 @@
     <Content Include="scripts\require.js" />
     <Content Include="scripts\lib\vue.min.js" />
     <None Include="scss\base\typography.scss" />
-    <Content Include="scss\components\_all.scss" />
-    <Content Include="scss\base\_all.scss" />
-    <Content Include="scss\base\body.scss" />
-    <Content Include="scss\base\template.scss" />
-    <Content Include="scss\components\header.scss" />
-    <Content Include="scss\components\app.scss" />
-    <Content Include="scss\components\container.scss" />
-    <Content Include="scss\components\footer.scss" />
-    <Content Include="scss\components\menu.scss" />
-    <Content Include="scss\_variables.scss" />
+    <None Include="scss\components\_all.scss" />
+    <None Include="scss\base\_all.scss" />
+    <None Include="scss\base\body.scss" />
+    <None Include="scss\base\template.scss" />
+    <None Include="scss\components\header.scss" />
+    <None Include="scss\components\app.scss" />
+    <None Include="scss\components\container.scss" />
+    <None Include="scss\components\footer.scss" />
+    <None Include="scss\components\menu.scss" />
+    <None Include="scss\_variables.scss" />
     <None Include="scss\pages\_all.scss" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -219,7 +223,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
-    <Content Include="scss\main.scss" />
+    <None Include="scss\main.scss" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
