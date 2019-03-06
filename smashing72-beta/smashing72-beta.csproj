@@ -189,7 +189,7 @@
     <Content Include="scss\components\container.scss" />
     <Content Include="scss\components\footer.scss" />
     <Content Include="scss\components\menu.scss" />
-    <Content Include="scss\components\submenu.scss" />
+    <Content Include="scss\_variables.scss" />
     <None Include="scss\pages\_all.scss" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
