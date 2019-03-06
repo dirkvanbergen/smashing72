@@ -1,4 +1,6 @@
-namespace smashing72_beta.Models
+using System.Web.Mvc;
+
+namespace smashing72_manager.Models
 {
     using System;
     using System.Collections.Generic;
@@ -11,7 +13,7 @@ namespace smashing72_beta.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [AllowHtml]
         public string Html { get; set; }
     }
 }

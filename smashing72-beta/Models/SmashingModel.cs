@@ -1,4 +1,4 @@
-namespace smashing72_beta.Models
+namespace smashing72_manager.Models
 {
     using System;
     using System.Data.Entity;
@@ -18,8 +18,8 @@ namespace smashing72_beta.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Content>()
-                .HasMany(e => e.Content1)
-                .WithOptional(e => e.Content2)
+                .HasMany(e => e.Children)
+                .WithOptional(e => e.Parent)
                 .HasForeignKey(e => e.ParentContentId);
         }
     }
