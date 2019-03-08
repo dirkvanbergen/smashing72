@@ -1,8 +1,8 @@
 ﻿<template id="menu-template">
     <div class="menu">
-        <div class="menu__toplevel-item" v-for="item in topLevelItems" :class="{active: item.isActive}">
-            <div class="menu__label" v-if="!item.UrlSegment || item.UrlSegment.length === 0">{{ item.MenuTitle }}</div>
-            <a class="menu__label" :href="item.UrlSegment" v-if="item.UrlSegment && item.UrlSegment.length > 0">{{ item.MenuTitle }}</a>
+        <div class="menu__toplevel-item" v-for="item in topLevelItems" :class="{active: isActive(item)}">
+            <div class="menu__label" v-if="isMenuItem(item)">{{ item.MenuTitle }}</div>
+            <a class="menu__label" :href="('/' + item.UrlSegment).replace('//', '/')" v-if="!isMenuItem(item)">{{ item.MenuTitle }}</a>
             <smashing-submenu v-if="item.subItems.length > 0" :items="item.subItems" :parent="item"></smashing-submenu>
         </div>
     </div>

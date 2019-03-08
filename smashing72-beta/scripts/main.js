@@ -1,9 +1,9 @@
 ﻿requirejs.config({
-    baseUrl: "scripts/lib",
+    baseUrl: "/scripts/lib",
     paths: {
-        app: "../app",
-        components: "../app/components",
-        pages: "../app/pages"
+        app: "/scripts/app",
+        components: "/scripts/app/components",
+        pages: "/scripts/app/pages"
     }
 });
 

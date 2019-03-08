@@ -6,6 +6,8 @@
     var footer = require("components/footer");
 
     var homepage = require("pages/homepage");
+    var teampage = require("pages/teampage");
+    var contentpage = require("pages/contentpage");
 
     var app = new Vue({
         el: "#app",

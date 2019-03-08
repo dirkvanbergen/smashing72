@@ -171,6 +171,8 @@
     <Content Include="scripts\app\components\news.js" />
     <Content Include="scripts\app\components\newsitem.js" />
     <Content Include="scripts\app\components\submenu.js" />
+    <Content Include="scripts\app\pages\teampage.js" />
+    <Content Include="scripts\app\pages\contentpage.js" />
     <Content Include="scripts\app\pages\homepage.js" />
     <Content Include="scripts\main.js" />
     <Content Include="scripts\require.js" />
@@ -211,6 +213,8 @@
     <Content Include="Views\Shared\VueTemplates\homepage.cshtml" />
     <Content Include="Views\Shared\VueTemplates\news.cshtml" />
     <Content Include="Views\Shared\VueTemplates\newsitem.cshtml" />
+    <Content Include="Views\Shared\VueTemplates\contentpage.cshtml" />
+    <Content Include="Views\Shared\VueTemplates\teampage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

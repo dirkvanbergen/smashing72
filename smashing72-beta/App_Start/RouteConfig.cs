@@ -15,8 +15,8 @@ namespace smashing72_beta
 
             routes.MapRoute(
                 name: "Home",
-                url: "",
-                defaults: new { controller = "Home", action = "Index" }
+                url: "{category}/{page}",
+                defaults: new { controller = "Home", action = "Index", category = UrlParameter.Optional, page = UrlParameter.Optional }
             );
         }
     }

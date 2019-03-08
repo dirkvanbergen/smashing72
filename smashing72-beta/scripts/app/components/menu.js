@@ -15,20 +15,35 @@
                     var tlis =  this.menu.filter(function(m) {
                         return !m.ParentContentId;
                     });
+                    var sortItems = function(a, b) {
+                        if (a.SortOrder < b.SortOrder) return -1;
+                        if (a.SortOrder > b.SortOrder) return 1;
+                        return 0;
+                    };
 
                     for (var i = 0; i < tlis.length; i++) {
                         var item = tlis[i];
-                        item.subItems = this.menu.filter(function(m) {
+                        var subs = this.menu.filter(function(m) {
                             return m.ParentContentId === item.Id;
                         });
+
+                        subs.sort(sortItems);
+
+                        item.subItems = subs;
                     }
+
+                    tlis.sort(sortItems);
                     return tlis;
                 }
             },
             methods: {
-                getLinkFor: function (item, parent) {
-                    if (parent) return parent.UrlSegment + "/" + item.UrlSegment;
-                    return item.UrlSegment;
+                isActive: function (item) {
+                    var locationParts = location.pathname.split("/").filter(function (p) { return p.length > 0});
+                    if (locationParts.length === 0) return item.UrlSegment === "/";
+                    return item.UrlSegment === locationParts[0];
+                },
+                isMenuItem: function(item) {
+                    return item.DataType === "MenuItem";
                 }
             }
         });
