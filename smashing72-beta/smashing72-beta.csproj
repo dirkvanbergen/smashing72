@@ -163,9 +163,6 @@
     <Content Include="css\main.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="parameters.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="scripts\app\app.js" />
     <Content Include="scripts\app\components\button.js" />
     <Content Include="scripts\app\components\footer.js" />
@@ -178,8 +175,12 @@
     <Content Include="scripts\main.js" />
     <Content Include="scripts\require.js" />
     <Content Include="scripts\lib\vue.min.js" />
-    <Content Include="ModifyConfig.ps1" />
-    <Content Include="ModifyConnectionString.ps1" />
+    <Content Include="ModifyConfig.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ModifyConnectionString.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="scss\base\typography.scss" />
     <None Include="scss\components\_all.scss" />
     <None Include="scss\base\_all.scss" />
