@@ -1,6 +1,6 @@
 ﻿<template id="submenu-template">
     <div class="submenu">
-        <a :href="item.link" v-for="item in items">{{ item.text }}</a>
+        <a :href="parent.UrlSegment + '/' + item.UrlSegment" v-for="item in items">{{ item.MenuTitle }}</a>
     </div>
 </template>
     

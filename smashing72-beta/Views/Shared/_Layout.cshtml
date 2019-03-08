@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using Newtonsoft.Json
+@using smashing72_manager.Models
+@{
+    var menu = ((List<Content>) ViewBag.Menu).Select(m => new {m.Title, m.MenuTitle, m.MenuOrder, m.UrlSegment, m.ParentContentId, m.Id});
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -11,7 +16,7 @@
 </head>
 <body>
 <div id="app">
-    <smashing-header></smashing-header>
+    <smashing-header :menu="appData.menu"></smashing-header>
     @RenderBody()
     <smashing-footer></smashing-footer>
 </div>
@@ -19,5 +24,10 @@
 @Html.Partial("VueTemplates/_all")
 
 <script data-main="scripts/main" src="~/scripts/require.js"></script>
+<script type="application/json" id="app-data">
+    {
+        "menu": @Html.Raw(JsonConvert.SerializeObject(menu))
+    }
+</script>
 </body>
 </html>

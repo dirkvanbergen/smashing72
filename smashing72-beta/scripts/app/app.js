@@ -9,6 +9,8 @@
 
     var app = new Vue({
         el: "#app",
-        data: {}
+        data: {
+            appData: JSON.parse(document.getElementById('app-data').innerHTML)
+        }
     });
 });

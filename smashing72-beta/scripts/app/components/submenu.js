@@ -4,6 +4,6 @@
         var comp = Vue.component("smashing-submenu",
             {
                 template: "#submenu-template",
-                props: ["items"]
+                props: ["items", "parent"]
             });
     });

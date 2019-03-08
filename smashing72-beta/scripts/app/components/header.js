@@ -5,6 +5,7 @@
     var comp = Vue.component("smashing-header",
         {
             template: "#header-template",
+            props: ["menu"],
             data: function() {
                 return {
                     title: "Smashing '72",
