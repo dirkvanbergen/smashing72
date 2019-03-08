@@ -1,5 +1,3 @@
-using smashing72_beta.Models;
-
 namespace smashing72_manager.Models
 {
     using System;
@@ -50,4 +48,3 @@ namespace smashing72_manager.Models
         public virtual HtmlData HtmlData { get; set; }
     }
 }
-sealed 
