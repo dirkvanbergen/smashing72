@@ -208,7 +208,6 @@
     <Content Include="Views\Shared\VueTemplates\_all.cshtml" />
     <Content Include="Views\Shared\VueTemplates\footer.cshtml" />
     <Content Include="Views\Shared\VueTemplates\menu.cshtml" />
-    <Content Include="Views\Shared\footer.cshtml" />
     <Content Include="Views\Shared\VueTemplates\submenu.cshtml" />
     <Content Include="Views\Shared\VueTemplates\homepage.cshtml" />
     <Content Include="Views\Shared\VueTemplates\news.cshtml" />
