@@ -140,10 +140,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Content.cs" />
-    <Compile Include="Models\HtmlData.cs" />
+    <Compile Include="Models\News.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Page.cs" />
     <Compile Include="Models\SmashingModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\NewsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\LogSma.svg" />
@@ -178,6 +180,8 @@
     <Content Include="scripts\require.js" />
     <Content Include="scripts\lib\vue.min.js" />
     <None Include="scss\base\typography.scss" />
+    <Content Include="scss\components\newsitem.scss" />
+    <Content Include="scss\components\news-column.scss" />
     <None Include="scss\components\_all.scss" />
     <None Include="scss\base\_all.scss" />
     <None Include="scss\base\body.scss" />
@@ -217,6 +221,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="images\uploaded\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="compilerconfig.json" />

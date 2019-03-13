@@ -1,7 +1,7 @@
 ﻿@using Newtonsoft.Json
-@using smashing72_manager.Models
+@using smashing72_beta.Models
 @{
-    var menu = ((List<Content>) ViewBag.Menu).Select(m => new {m.Title, m.MenuTitle, m.MenuOrder, m.UrlSegment, m.ParentContentId, m.Id, m.DataType});
+    var menu = ((List<smashing72_beta.Models.Page>) ViewBag.Menu).Select(m => new {m.Title, m.MenuTitle, m.MenuOrder, m.UrlSegment, m.ParentContentId, m.Id, m.DataType});
     var contentPage = new {ViewBag.Content.DataType, ViewBag.Content.Title};
 }
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
     {
     "menu": @Html.Raw(JsonConvert.SerializeObject(menu)),
     "contentPage": @Html.Raw(JsonConvert.SerializeObject(contentPage)),
-    "html": "@Html.Raw(ViewBag.Html.Replace("\"", "\\\"").Replace("</", "<\\/").Replace("/>"," />"))"
+    "html": @Html.Raw(JsonConvert.SerializeObject(ViewBag.Content.Html))
     }
 </script>
 </body>

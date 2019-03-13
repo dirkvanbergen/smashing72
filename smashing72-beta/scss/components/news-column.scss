@@ -1,0 +1,28 @@
+﻿/// <reference path="../_variables.scss" />
+.news-column {
+    width: 100%;
+    float: left;
+
+    @media (min-width: 960px) {
+        width: 75%;
+    }
+
+
+    @media (min-width: 1200px) {
+        width: 75%;
+    }
+}
+
+.side-column {
+    width: 100%;
+    float: right;
+
+    @media (min-width: 960px) {
+        width: 25%;
+    }
+
+
+    @media (min-width: 1200px) {
+        width: 25%;
+    }
+}

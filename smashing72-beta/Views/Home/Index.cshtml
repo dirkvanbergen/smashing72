@@ -1,6 +1,6 @@
 ﻿@if (ViewBag.Content.DataType == "HomePage")
 {
-    <smashing-homepage></smashing-homepage>
+    <smashing-homepage :page="appData.contentPage" :html="appData.html"></smashing-homepage>
 }
 else if (ViewBag.Content.DataType == "ContentPage")
 {

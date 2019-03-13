@@ -1,5 +1,7 @@
 ﻿<template id="newsitem-template">
-    <div class="newsitem" style="line-height: 50px;">
-        Hhier is nieuws!
+    <div class="newsitem">
+        <div class="newsitem__title">{{ item.Title }}</div>
+        <div class="newsitem__date">{{item.Day}} {{item.MonthName}} {{item.Year}}</div>
+        <div class="newsitem__text" v-html="item.Article"></div>
     </div>
 </template>

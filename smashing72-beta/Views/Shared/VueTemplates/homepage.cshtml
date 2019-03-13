@@ -1,7 +1,17 @@
-﻿<template id="homepage-template">
+﻿@using Newtonsoft.Json
+<template id="homepage-template">
     <div class="container">
-        Homepage {{ greeting }}
-        
-        <smashing-news></smashing-news>
+        <div class="news-column">
+            <smashing-newsitem v-for="item in pageData.news" :item="item"></smashing-newsitem>
+        </div>
+        <div class="side-column">
+            Text
+        </div>
     </div>
 </template>
+
+<script type="application/json" id="page-data">
+    {
+    "news": @Html.Raw(JsonConvert.SerializeObject(ViewBag.PageData.News))
+    }
+</script>
