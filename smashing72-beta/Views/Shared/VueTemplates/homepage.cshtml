@@ -1,4 +1,8 @@
-﻿@using Newtonsoft.Json
+﻿@using System.Dynamic
+@using Newtonsoft.Json
+@{
+    var news = ViewBag.PageData != null && ViewBag.PageData.News != null ? ViewBag.PageData.News : new List<string>();
+}
 <template id="homepage-template">
     <div class="container">
         <div class="news-column">
@@ -12,6 +16,6 @@
 
 <script type="application/json" id="page-data">
     {
-    "news": @Html.Raw(JsonConvert.SerializeObject(ViewBag.PageData.News))
+    "news": @Html.Raw(JsonConvert.SerializeObject(news))
     }
 </script>
