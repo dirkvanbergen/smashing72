@@ -181,6 +181,7 @@
     <None Include="scss\base\typography.scss" />
     <Content Include="scss\components\newsitem.scss" />
     <Content Include="scss\components\news-column.scss" />
+    <Content Include="scss\components\button.scss" />
     <None Include="scss\components\_all.scss" />
     <None Include="scss\base\_all.scss" />
     <None Include="scss\base\body.scss" />

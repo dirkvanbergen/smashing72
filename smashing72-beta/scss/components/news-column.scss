@@ -2,27 +2,20 @@
 .news-column {
     width: 100%;
     float: left;
+    flex-shrink: 0;
 
     @media (min-width: 960px) {
         width: 75%;
-    }
-
-
-    @media (min-width: 1200px) {
-        width: 75%;
+        padding-right: 20px;
     }
 }
 
 .side-column {
     width: 100%;
     float: right;
+    flex-shrink: 0;
 
     @media (min-width: 960px) {
-        width: 25%;
-    }
-
-
-    @media (min-width: 1200px) {
         width: 25%;
     }
 }

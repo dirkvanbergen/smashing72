@@ -4,12 +4,12 @@
     var news = ViewBag.PageData != null && ViewBag.PageData.News != null ? ViewBag.PageData.News : new List<string>();
 }
 <template id="homepage-template">
-    <div class="container">
+    <div class="container container--flex">
         <div class="news-column">
             <smashing-newsitem v-for="item in pageData.news" :item="item"></smashing-newsitem>
         </div>
         <div class="side-column">
-            Text
+            <a href="https://smashingdiemen.teaco.nl/" class="button button--white">Smashing '72 wedstrijd kleding</a>
         </div>
     </div>
 </template>
