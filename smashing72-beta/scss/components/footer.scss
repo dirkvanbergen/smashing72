@@ -9,15 +9,26 @@
     .container {
         height: 100%;
         margin-bottom: 0;
+        padding: 0;
     }
 
     &__content,
     &__maps {
-        width: 50%;
+        width: 100%;
+
+        @media (min-width: 960px) {
+            width: 50%;
+        }
+    }
+
+    &__content {
+        padding: 20px;
     }
 
     &__maps {
-        iframe{
+        height: 250px;
+
+        iframe {
             height: 100%;
             width: 100%;
         }

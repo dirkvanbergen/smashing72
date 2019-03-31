@@ -147,6 +147,7 @@
     <Compile Include="ViewModels\NewsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\menu.svg" />
     <Content Include="images\LogSma.svg" />
     <Content Include="images\ball.svg" />
     <Content Include="images\logo teaco.png" />
@@ -214,10 +215,10 @@
     <Content Include="Views\Shared\VueTemplates\menu.cshtml" />
     <Content Include="Views\Shared\VueTemplates\submenu.cshtml" />
     <Content Include="Views\Shared\VueTemplates\homepage.cshtml" />
-    <Content Include="Views\Shared\VueTemplates\news.cshtml" />
     <Content Include="Views\Shared\VueTemplates\newsitem.cshtml" />
     <Content Include="Views\Shared\VueTemplates\contentpage.cshtml" />
     <Content Include="Views\Shared\VueTemplates\teampage.cshtml" />
+    <Content Include="Views\Shared\VueTemplates\archivepage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

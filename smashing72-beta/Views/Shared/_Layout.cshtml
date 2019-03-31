@@ -16,8 +16,8 @@
     <title>Smashing '72 - Diemen Volleybal</title>
 </head>
 <body>
-<div id="app">
-    <smashing-header :menu="appData.menu"></smashing-header>
+<div id="app" :class="{'menu-open': menuExpanded}">
+    <smashing-header :menu="appData.menu" v-on:menu-expanded="menuExpanded = true" v-on:menu-collapsed="menuExpanded = false"></smashing-header>
     @RenderBody()
     <smashing-footer></smashing-footer>
 </div>

@@ -1,7 +1,7 @@
 ﻿/// <reference path="../_variables.scss" />
 .header {
     width: 100%;
-    height: 200px;
+    height: 150px;
     background-image: url('/images/smashing-foto-5.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -10,6 +10,10 @@
     margin-bottom: 50px;
 
     @media (min-width: 720px) {
+        height: 200px;
+    }
+
+    @media (min-width: 960px) {
         height: 250px;
     }
 
@@ -27,7 +31,7 @@
     .container {
         color: white;
         position: relative;
-        padding-top: 25px;
+        padding-top: 20px;
         height: 100%;
 
         @media (min-width: 720px) {
@@ -45,8 +49,10 @@
         font-weight: 700;
         font-size: 48px;
         line-height: 56px;
-        margin-left: 100px;
+        margin-left: 60px;
         margin-bottom: 0px;
+        white-space: nowrap;
+        overflow: hidden;
 
         @media (min-width: 720px) {
             font-size: 72px;
@@ -54,32 +60,20 @@
             margin-left: 140px;
         }
 
-        @media (max-width: 500px) {
-            margin-left: 0px;
-            font-size: 36px;
-            line-height: 46px;
-        }
+        @media (min-width: 960px) {
+            overflow: visible;
 
-        &:before {
-            position: absolute;
-            content: '';
-            background-image: url('/images/LogSma.svg');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            width: 80px;
-            height: 78px;
-            left: -100px;
-            top: 0px;
-
-            @media (min-width: 720px) {
+            &:before {
+                position: absolute;
+                content: '';
+                background-image: url('/images/LogSma.svg');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
                 width: 120px;
                 height: 114px;
                 left: -140px;
-            }
-
-            @media (max-width: 500px) {
-                display: none;
+                top: 0px;
             }
         }
     }
@@ -87,7 +81,7 @@
     &__subtitle {
         font-size: 16px;
         line-height: 20px;
-        margin-left: 100px;
+        margin-left: 60px;
         margin-top: -5px;
 
         @media (min-width: 720px) {
@@ -95,20 +89,18 @@
             line-height: 29px;
             margin-left: 135px;
         }
-
-        @media (max-width: 500px) {
-            margin-left: 0px;
-        }
     }
 
     &__button {
         position: absolute;
-        width: 280px;
-        bottom: -15px;
+        left: 20px;
+        bottom: -25px;
         right: 20px;
 
         @media (min-width: 960px) {
+            left: auto;
             right: 0px;
+            bottom: -15px;
             width: 230px;
         }
 

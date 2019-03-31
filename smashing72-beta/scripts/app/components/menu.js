@@ -8,6 +8,7 @@
             props: ["menu"],
             data: function() {
                 return {
+                    expanded: false
                 };
             },
             computed: {
@@ -44,6 +45,30 @@
                 },
                 isMenuItem: function(item) {
                     return item.DataType === "MenuItem";
+                },
+                expand: function() {
+                    this.expanded = true;
+                    this.$emit("menu-expanded");
+                },
+                collapse: function () {
+                    this.expanded = false;
+                    this.$emit("menu-collapsed");
+                },
+                openSubmenu: function(item) {
+                    for (var i = 0; i < this.$children.length; i++) {
+                        var sub = this.$children[i];
+                        if (sub.parent.Id === item.Id) {
+                            sub.expand();
+                        }
+                    }
+                },
+                subOpen: function (item) {
+                    for (var i = 0; i < this.$children.length; i++) {
+                        var sub = this.$children[i];
+                        if (sub.parent.Id === item.Id) {
+                            return sub.expanded;
+                        }
+                    }
                 }
             }
         });

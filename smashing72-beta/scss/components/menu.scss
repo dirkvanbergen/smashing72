@@ -1,14 +1,158 @@
 ﻿/// <reference path="../_variables.scss" />
 .menu {
+    position: absolute;
     left: 20px;
 
+    &__title {
+        display: none;
+    }
+
+    &__toplevel-item {
+        display: none;
+        position: relative;
+    }
+
+    @media (max-width: 959px) {
+
+        @media (min-width: 720px) {
+            top: 60px;
+        }
+
+        top: 35px;
+        width: 50px;
+        height: 50px;
+        background-image: url('/images/menu.svg');
+        background-position: center;
+        background-size: 50px 50px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+
+        &--expanded {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            border: 0px;
+            background-color: white;
+            z-index: 5;
+            padding-top: 50px;
+            overflow-y: auto;
+
+            .menu__title {
+                position: fixed;
+                top: 0px;
+                width: 100%;
+                color: $font-color;
+                display: block;
+                font-size: 24px;
+                font-weight: bold;
+                padding-left: 20px;
+                line-height: 50px;
+                border-bottom: 1px solid $medium-gray;
+                background-color: white;
+                z-index: 2;
+            }
+
+            .menu__close {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                right: 20px;
+                top: 10px;
+                z-index: 2;
+
+                &:before,
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 4px;
+                    height: 30px;
+                    background-color: $font-color;
+                    border-radius: 4px;
+                    transform: rotate(45deg);
+                    transform-origin: center;
+                }
+
+                &:after {
+                    transform: rotate(-45deg);
+                }
+            }
+
+            .menu__toplevel-item {
+                display: block;
+
+                .menu__label {
+                    display: block;
+                    font-size: 24px;
+                    padding-left: 20px;
+                    line-height: 50px;
+                    color: $red;
+                    text-decoration: none;
+                    border-bottom: 1px solid $medium-gray;
+                }
+
+                &--has-subs {
+                    &:before, &:after {
+                        position: absolute;
+                        top: 15px;
+                        left: 20px;
+                        content: '';
+                        width: 3px;
+                        height: 15px;
+                        border-radius: 3px;
+                        background-color: $red;
+                    }
+
+                    &:after {
+                        transform: rotate(90deg);
+                        transform-origin: center;
+                    }
+
+                    .menu__label {
+                        padding-left: 40px;
+                    }
+                }
+
+                &--expanded {
+                    &:before {
+                        display: none;
+                    }
+                }
+
+                .submenu {
+                    display: none;
+
+                    &--expanded {
+                        display: block;
+
+                        a {
+                            display: block;
+                            font-size: 24px;
+                            padding-left: 40px;
+                            text-decoration: none;
+                            line-height: 50px;
+                            border-bottom: 1px solid $medium-gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     @media (min-width: 960px) {
-        position: absolute;
         bottom: 1px;
         left: 0px;
         display: flex;
+        cursor: default;
+
+        &__title {
+            display: none;
+        }
 
         &__toplevel-item {
+            display: block;
             margin-right: 40px;
             position: relative;
 
@@ -28,7 +172,7 @@
 
             &:hover {
                 .submenu {
-                    display: block;
+                    height: auto;
                     opacity: 1;
                 }
 
@@ -53,7 +197,7 @@
         }
 
         .submenu {
-            display: none;
+            height: 0;
             opacity: 0;
             transition: opacity 0.2s ease-in-out;
             position: absolute;

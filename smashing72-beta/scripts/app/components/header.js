@@ -11,6 +11,14 @@
                     title: "Smashing '72",
                     subtitle: "De leukste volleybalvereniging van Diemen!"
                 };
+            },
+            methods: {
+                menuExpanded: function() {
+                    this.$emit("menu-expanded");
+                },
+                menuCollapsed: function() {
+                    this.$emit("menu-collapsed");
+                }
             }
         });
 });
